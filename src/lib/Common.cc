@@ -477,7 +477,7 @@ size_t typeHash(Type *Ty) {
     // Compiler sometimes fails recoginize size of array (compiler
     // bug?), so let's just use the element type
 
-    //Ty = ATy->getElementType();
+    Ty = ATy->getElementType();
     raw_string_ostream rso(sig);
     Ty->print(rso);
     ty_str = rso.str() + "[array]";
